@@ -27,8 +27,8 @@ The app’s core feature is its ability to **identify its own failures and itera
 
 <p align="center">
   <img src="./images/main.png" alt="User Enters Prompt" width="400">
-  <img src="./images/demo_fail.jpg" alt="AI Fails Compliance Check" width="400">
-  <img src="./images/demo_pass.jpg" alt="AI Passes Compliance Check" width="400">
+  <img src="./images/demo_fail.png" alt="AI Fails Compliance Check" width="400">
+  <img src="./images/demo_pass.png" alt="AI Passes Compliance Check" width="400">
 </p>
 
 ---
@@ -89,7 +89,7 @@ Examples of complex designs generated and analyzed by the system:
 
 | **Sample 1** | **Sample 2** |
 |---------------|--------------|
-| <img src="./images/sample.jpg" alt="Sample Design 1" width="400"> | <img src="./images/sample2.jpg" alt="Sample Design 2" width="400"> |
+| <img src="./images/sample.png" alt="Sample Design 1" width="400"> | <img src="./images/sample2.png" alt="Sample Design 2" width="400"> |
 
 ---
 

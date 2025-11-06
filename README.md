@@ -122,6 +122,7 @@ graph TD
     style A fill:#D6EAF8,stroke:#3498DB
     style J fill:#D5F5E3,stroke:#2ECC71
     style K fill:#FADBD8,stroke:#E74C3C
+```
 
 🖥️ Interface
 

@@ -1,0 +1,69 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+.venv/
+ENV/
+env/
+VENV/
+venv.bak/
+
+# Environment variables
+.env
+.env.*
+*.env
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*~
+
+# Local data and models
+# -----------------------------
+# Ignore the generated vector database
+chroma_db/
+
+# Ignore the generated image/report outputs
+outputs/
+
+# Ignore downloaded pre-trained models
+yolov8n.pt
+*.pt
+
+# Ignore generated dataset folders (if any)
+dataset/
+augmented_dataset/
+
+# Jupyter/Colab notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# Temporary test scripts
+test_tool

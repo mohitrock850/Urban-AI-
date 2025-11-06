@@ -1,0 +1,20 @@
+{
+  "rules": [
+    {
+      "id": "GRN-01",
+      "category": "Green Space",
+      "description": "The total green cover, including parks and planted areas, must be at least 10% of the total site area.",
+      "compliance_metric": "green_cover_percentage",
+      "threshold": 10,
+      "unit": "%"
+    },
+    {
+      "id": "BLD-01",
+      "category": "Building Footprint",
+      "description": "The total footprint of all buildings must not exceed 40% of the total site area.",
+      "compliance_metric": "building_footprint_percentage",
+      "threshold": 40,
+      "unit": "%"
+    }
+  ]
+}

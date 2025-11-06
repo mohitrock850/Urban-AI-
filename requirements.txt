@@ -1,0 +1,26 @@
+# Core Libraries
+langchain-cli
+langgraph
+langchain-openai
+langchain_community
+pydantic
+
+# RAG Components
+chromadb
+openai
+tiktoken
+
+# CV Component (YOLOv8)
+ultralytics
+opencv-python
+Pillow
+
+# LangSmith for Observability
+langsmith
+
+# Web Demo (choose one)
+streamlit
+# gradio
+
+pypdf
+jq

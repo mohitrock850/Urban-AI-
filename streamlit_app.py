@@ -1,10 +1,11 @@
+# streamlit_app.py
+
 import streamlit as st
 import os
 import time
 from PIL import Image
 
 # --- Load Environment Variables FIRST ---
-# This ensures all API keys and LangSmith settings are loaded before other imports
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -47,10 +48,12 @@ def analyst_node(state: GraphState) -> dict:
 
 def critique_node(state: GraphState) -> dict:
     critique_agent = create_critique_agent()
+    # --- THIS IS THE FIX ---
+    # We only pass 'analysis_results', matching the new prompt
     critique_text = critique_agent.invoke({
-        "analysis_results": state["analysis_results"],
-        "rag_context": state["rag_context"]
+        "analysis_results": state["analysis_results"]
     }).content
+    # --- END OF FIX ---
     
     if "FAIL" in critique_text.upper():
         return {"critique_feedback": critique_text}
@@ -161,7 +164,8 @@ if start_button:
                 elif key == "designer":
                     status.write("Generating a visual site plan with DALL-E 3...")
                     image = Image.open(value['image_path'])
-                    image_placeholder.image(image, caption="Generated Site Plan", use_column_width=True)
+                    # --- THIS IS THE FIX FOR THE STREAMLIT WARNING ---
+                    image_placeholder.image(image, caption="Generated Site Plan", width='stretch')
                 elif key == "analyst":
                     status.write("Analyzing the design with the custom-trained YOLOv8 model...")
                     st.write(f"**Analysis Results:**")
@@ -195,4 +199,3 @@ if not st.session_state.running and st.session_state.final_report:
         st.session_state.final_report = None
         st.session_state.graph_state = None
         st.rerun()
-
